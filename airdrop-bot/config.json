@@ -1,0 +1,52 @@
+{
+  "ui": {
+    "menu": {
+      "terms": "📄 Terms",
+      "bonus": "💰 Bonus",
+      "connect_wallet": "🦊 Connect Wallet",
+      "balance": "🏆 Balance",
+      "chat": "🤖 Chat"
+    }
+  },
+  "terms_text": "📄 Terms & Rules\n\n1) Wallet & Account\n- One Telegram account = one wallet.\n- A wallet address can be registered only once across all users.\n- Make sure you submit the correct wallet address. Changes may be restricted.\n\n2) Points & Missions\n- Points are granted once per mission unless stated otherwise.\n- Daily Check-in resets at 00:00 UTC.\n- Streak bonuses are based on consecutive daily check-ins (missing a day resets your streak).\n\n3) Fair Play\n- Any abuse, cheating, automation, duplicate accounts, or suspicious activity may result in disqualification.\n- We reserve the right to review, adjust, or remove points if needed.\n\nBy using this bot, you agree to these rules.",
+  "timezone": "UTC",
+  "points": {
+    "wallet_register": 50,
+    "referral_qualified": 100,
+    "daily_checkin": 10,
+    "streak_bonuses": [
+      { "days": 3, "points": 20 },
+      { "days": 7, "points": 100 }
+    ]
+  },
+  "missions": [
+    {
+      "id": "x_submit",
+      "button_text": "🐦 Submit X profile",
+      "prompt": "Send your X profile link:",
+      "intro": "Follow our X (Twitter) now and earn points!",
+      "points": 30,
+      "validator": "x_profile",
+      "url": "https://x.com/Apis11Official",
+      "delay_minutes": 30
+    },
+    {
+      "id": "tg_submit",
+      "button_text": "📣 Submit Telegram username",
+      "prompt": "Send your Telegram username (e.g., @myname):",
+      "intro": "Join our Telegram now and earn points!",
+      "points": 20,
+      "validator": "tg_username",
+      "url": "https://t.me/piggycell_chat",
+      "delay_minutes": 30
+    },
+    {
+      "id": "recipe_submit",
+      "button_text": "🍳 Submit Your Recipe",
+      "prompt": "Send your ORIGINAL recipe as text in this format:\n\nIngredients:\n- ...\n- ...\n\nSteps:\n1) ...\n2) ...\n\n(No links. Please write at least a few lines.)",
+      "intro": "🍳 Share your original recipe and earn points!",
+      "points": 40,
+      "validator": "recipe_text"
+    }
+  ]
+}
