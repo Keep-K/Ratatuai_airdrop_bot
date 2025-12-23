@@ -35,7 +35,7 @@ from telegram.ext import (
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
-RECIPE_AI_BASE_URL = os.getenv("RECIPE_AI_BASE_URL", "http://127.0.0.1:8000").strip()
+RECIPE_AI_BASE_URL = os.getenv("RECIPE_AI_BASE_URL", "http://127.0.0.1:8000").strip().rstrip("/")
 RECIPE_AI_TIMEOUT = 30
 BOT_USERNAME = os.getenv("BOT_USERNAME", "").strip()
 
